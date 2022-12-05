@@ -9070,6 +9070,9 @@ int main(int argc, char** argv) {
         } else if (!strcmp(optarg, "IPP")) {
           extract_requests = &extract_requests_ipp;
           extract_response_codes = &extract_response_codes_ipp;
+        } else if (!strcmp(optarg, "MODBUSTCP")) {
+          extract_requests = &extract_requests_modbustcp;
+          extract_response_codes = &extract_response_codes_modbustcp;
         } else {
           FATAL("%s protocol is not supported yet!", optarg);
         }
